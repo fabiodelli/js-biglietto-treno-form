@@ -67,12 +67,12 @@ con massimo due decimali, per indicare i centesimi sul prezzo).
 // Chiedo all'utente il numero di chilometri e l'età
 
 
+document.getElementById("button").addEventListener("click", output);
 
+function output() {
 
-function result() {
-
-const nes = document.getElementById("name").value;
-console.nes()
+const nes = document.getElementById("nes").value;
+console.log()
 
 const km = document.getElementById("km").value;
 console.log(km)
@@ -96,9 +96,12 @@ const priceFormatted = ticketPrice.toFixed(2);
 
 document.getElementById("ticket_price").innerHTML = `${priceFormatted}`
 console.log(priceFormatted)
+    
+};
 
-}
 
 
 
-document.getElementsByClassName("btn-outline-success")
+
+
+
