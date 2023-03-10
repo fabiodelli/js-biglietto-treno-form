@@ -117,15 +117,15 @@ document.getElementById("nesOut").innerHTML = `${nes}`
 console.log(nes)
 
 document.getElementById("offer").innerHTML = `${age}`
-console.log(priceFormatted)
+console.log(age)
 
 document.getElementById("carrozza").innerHTML = `${carrozza}`
-console.log(priceFormatted)
+console.log(carrozza)
 
 document.getElementById("codiceCp").innerHTML = `${code}`
-console.log(priceFormatted)
+console.log(code)
 
-document.getElementById("ticketPrice").innerHTML = `${priceFormatted}`
+document.getElementById("ticketPrice").innerHTML = `€ ${priceFormatted}`
 console.log(priceFormatted)
     
 };
