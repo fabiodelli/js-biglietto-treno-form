@@ -13,23 +13,24 @@
 <body>
 
 
-    <div class="container-fluid d-flex flex-column justify-content-center vh-100 bg-danger">
-      
-        <div class="container-md d-flex flex-column justify-content-center bg-white h-25 p-1">
-            
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center vh-100 bg-danger">
 
+        <h1 class="text-white mb-5" >Calcola il prezzo del tuo biglietto</h1>
+      
+        <div class="container-md d-flex flex-column justify-content-center bg-white rounded-2 h-25 p-1">
+            
             <div class="d-flex justify-content-around align align-items-center bg-white h-75 ">
-                <div>
-                    <div  class="text-danger">Nome e cognome</div>
-                    <input id="nes" type="text" class="border-1 border-danger rounded-2">
+                <div class="d-flex flex-column align align-items-center">
+                    <div  class="text-danger fw-bold mb-3">Nome e cognome</div>
+                    <input id="nes" type="text" class="border_red rounded-2">
                 </div>
-                <div>
-                    <div class="text-danger">Km da percorrere</div>
-                    <input id="km" type="text" class="border-1 border-danger rounded-2">
+                <div class="d-flex flex-column align align-items-center">
+                    <div class="text-danger fw-bold mb-3">Km da percorrere</div>
+                    <input id="km" type="text" class="border_red rounded-2">
                 </div>
-                <div>
-                    <div class="text-danger">Fascia d' eta</div>
-                    <select id="age" class="form-select form-select-sm">             
+                <div class="d-flex flex-column align align-items-center">
+                    <div class="text-danger fw-bold mb-3">Fascia d' eta</div>
+                    <select id="age" class="form-select form-select-sm border_red rounded-2 shadow-none">             
                         <option selected>Open this select menu</option>
                         <option value="Minorenne">Minorenne</option>
                         <option value="Adulto">Adulto</option>
@@ -39,33 +40,35 @@
             </div>
 
             <div class="d-flex justify-content-center bg-white gap-3 h-25 pb-2 pt-1">
-                <span id="button" class="btn-outline-warning text-bg-danger pe-2 ps-2">Genera</span>
-                <span class="btn-outline text-bg-danger pe-2 ps-2">Annulla</span>
+                <span id="button" class="btn-outline-warning text-bg-danger rounded-2 pe-2 ps-2">Genera</span>
+                <span class="btn-outline text-bg-danger rounded-2 pe-2 ps-2">Annulla</span>
             </div>
 
         </div>
 
-        <div class="container-md d-flex justify-content-between bg-white h-25 mt-5 p-1 ">
-            <div class="d-flex flex-column justify-content-center gap-5 w-25">
-                <h2>Passeggero</h2>
-                <div id="nesOut"></div>
+        <h1 class="text-white m-5" >Il tuo biglietto</h1>
+
+        <div class="container-md d-flex justify-content-around bg-white rounded-2 h-25 p-1 ">
+            <div class=" col-4 d-flex flex-column justify-content-center gap-5 w-25">
+                <h2 class="border-top border-1 border-dark">Passeggero</h2>
+                <h5 id="nesOut" class="mb-2 border-bottom border-1 border-dark"></h5>
             </div>
 
-            <div class="d-flex flex-column justify-content-center gap-5">
-                <div class="fw-bold">Offerta</div>
-                <div  id="offer" class=""></div>                
+            <div class="col-2 d-flex flex-column justify-content-center gap-5">
+                <div class="fw-bold border-top border-1 border-dark">Offerta</div>
+                <div  id="offer" class="border-bottom border-1 border-dark"></div>                
             </div>
-            <div class="d-flex flex-column justify-content-center gap-5">
-                <div class="fw-bold">Carrozza</div>
-                <div id="carrozza" class=""></div>                
+            <div class="col-2 d-flex flex-column justify-content-center gap-5">
+                <div class="fw-bold border-top border-1 border-dark">Carrozza</div>
+                <div id="carrozza" class="border-bottom border-1 border-dark"></div>                
             </div>
-            <div class="d-flex flex-column justify-content-center gap-5">
-                <div  class="fw-bold">Codice CP</div>
-                <div id="codiceCp" class=""></div>                
+            <div class="col-2 d-flex flex-column justify-content-center gap-5">
+                <div  class="fw-bold border-top border-1 border-dark">Codice CP</div>
+                <div id="codiceCp" class="border-bottom border-1 border-dark"></div>                
             </div>
-            <div class="d-flex flex-column justify-content-center gap-5">
-                <div  class="fw-bold">Prezzo</div>
-                <div id="ticketPrice" class=""></div>                
+            <div class="col-2 d-flex flex-column justify-content-center gap-5">
+                <div  class="fw-bold border-top border-1 border-dark">Prezzo</div>
+                <div id="ticketPrice" class="border-bottom border-1 border-dark"></div>                
             </div>
         </div>
     </div>
