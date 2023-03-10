@@ -12,32 +12,65 @@
 
 <body>
 
-    <div class="vh-100 d-flex flex-column gap-3 justify-content-center align-items-center">
 
-        <div class="d-flex gap-3 justify-content-center align-items-center">
-            <span>
-                <div>Nome e cognome</div>
-                <input id="nes" value="">
-            </span>
-            <span>
-                <div>km</div>
-                <input id="km" type="text">
-            </span>
-            <span>
-                <div>Eta</div>
-                <input id="age" type="text">
-            </span>
+    <div class="container-fluid d-flex flex-column justify-content-center vh-100 bg-danger">
+      
+        <div class="container-md d-flex flex-column justify-content-center bg-white h-25 p-1">
+            
+
+            <div class="d-flex justify-content-around align align-items-center bg-white h-75 ">
+                <div>
+                    <div  class="text-danger">Nome e cognome</div>
+                    <input id="nes" type="text" class="border-1 border-danger rounded-2">
+                </div>
+                <div>
+                    <div class="text-danger">Km da percorrere</div>
+                    <input id="km" type="text" class="border-1 border-danger rounded-2">
+                </div>
+                <div>
+                    <div class="text-danger">Fascia d' eta</div>
+                    <select id="age" class="form-select form-select-sm">             
+                        <option selected>Open this select menu</option>
+                        <option value="Minorenne">Minorenne</option>
+                        <option value="Adulto">Adulto</option>
+                        <option value="Over 65">Over 65</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center bg-white gap-3 h-25 pb-2 pt-1">
+                <span id="button" class="btn-outline-warning text-bg-danger pe-2 ps-2">Genera</span>
+                <span class="btn-outline text-bg-danger pe-2 ps-2">Annulla</span>
+            </div>
+
         </div>
 
-        <button class="btn-outline" id="button" >ciao</button>
+        <div class="container-md d-flex justify-content-between bg-white h-25 mt-5 p-1 ">
+            <div class="d-flex flex-column justify-content-center gap-5 w-25">
+                <h2>Passeggero</h2>
+                <div id="nesOut"></div>
+            </div>
 
-        <span>
-            <div>il prezzo è:</div>
-            <div id="ticket_price">
-        </span>
-        
-
+            <div class="d-flex flex-column justify-content-center gap-5">
+                <div class="fw-bold">Offerta</div>
+                <div  id="offer" class=""></div>                
+            </div>
+            <div class="d-flex flex-column justify-content-center gap-5">
+                <div class="fw-bold">Carrozza</div>
+                <div id="carrozza" class=""></div>                
+            </div>
+            <div class="d-flex flex-column justify-content-center gap-5">
+                <div  class="fw-bold">Codice CP</div>
+                <div id="codiceCp" class=""></div>                
+            </div>
+            <div class="d-flex flex-column justify-content-center gap-5">
+                <div  class="fw-bold">Prezzo</div>
+                <div id="ticketPrice" class=""></div>                
+            </div>
+        </div>
     </div>
+
+    
 
     
 

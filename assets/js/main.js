@@ -35,24 +35,28 @@ con massimo due decimali, per indicare i centesimi sul prezzo).
 
 //Procedimento
 
-/* Chiedo all'utente il numero di chilometri e l'età
+/*  Seleziono il pulsante e dichiaro la funzione che verra invocata al click.
+
+    Chiedo all'utente nome KM da percorrere e l'età e li salvo in una variabile.
+
+    Creo valori random da mostrare in seguito e li salvo in una variabile.
 
     Calcolo il prezzo base del biglietto:
     - il prezzo del biglietto è definito in base ai km (0.21 € al km)
 
-    Applico lo sconto in base all'età:
-    - va applicato uno sconto del 20% per i minorenni
+    Applico sconto in base a fascia d'eta e formatto il prezzo:
+    - va applicato uno sconto del 20% per i minorenni.
     - va applicato uno sconto del 40% per gli over 65.
+    - formatto il prezzo con massimo due decimali, per indicare centesimi sul prezzo.
 
-    inserisco l'output del prezzo finale nel DOM in forma umana:
-    - con massimo due decimali, per indicare centesimi sul prezzo.
+    inserisco i valori ricavati e processati nei rispettivi elementi del DOM.
+    
 */
 
 
 
 //Strumenti
 
-// function
 // variables
 // Number
 // prompt
@@ -60,19 +64,24 @@ con massimo due decimali, per indicare i centesimi sul prezzo).
 // conditions
 // toFixed
 // getElementById
+// function
+// math.floor
+// math.random
 
 
 //Codice
 
-// Chiedo all'utente il numero di chilometri e l'età
 
+// Seleziono il pulsante e dichiaro la funzione che verra invocata al click.
 
 document.getElementById("button").addEventListener("click", output);
 
 function output() {
 
-const nes = document.getElementById("nes").value;
-console.log()
+// Chiedo all'utente nome KM da percorrere e l'età e li salvo in una variabile.
+
+const nes =document.getElementById("nes").value;
+console.log(nes)
 
 const km = document.getElementById("km").value;
 console.log(km)
@@ -80,21 +89,43 @@ console.log(km)
 const age = document.getElementById("age").value;
 console.log(age)
 
+// Creo valori random da mostrare in seguito e li salvo in una variabile.
+
+const carrozza = Math.floor(Math.random() * 9)
+
+const code = Math.floor(Math.random() * 10000)
+
+// Calcolo valore base biglietto
+
 let ticketPrice = km * 0.21;
 console.log(ticketPrice)
 
+// Applico sconto in base a fascia d'eta e formatto il valore.
 
-if (age < 18) {
+if (age == "minorenne") {
     ticketPrice = ticketPrice * 0.8;  
-} else if (age >= 65) {
+} else if (age == "Over 65") {
     ticketPrice = ticketPrice * 0.6;  
 }
 console.log(ticketPrice)
 
-// inserisco l'output del prezzo finale nel DOM in forma umana
 const priceFormatted = ticketPrice.toFixed(2);
 
-document.getElementById("ticket_price").innerHTML = `${priceFormatted}`
+// inserisco i valori ricavati e processati nei rispettivi elementi del DOM
+
+document.getElementById("nesOut").innerHTML = `${nes}`
+console.log(nes)
+
+document.getElementById("offer").innerHTML = `${age}`
+console.log(priceFormatted)
+
+document.getElementById("carrozza").innerHTML = `${carrozza}`
+console.log(priceFormatted)
+
+document.getElementById("codiceCp").innerHTML = `${code}`
+console.log(priceFormatted)
+
+document.getElementById("ticketPrice").innerHTML = `${priceFormatted}`
 console.log(priceFormatted)
     
 };
