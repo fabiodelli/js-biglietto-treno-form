@@ -91,7 +91,7 @@ console.log(age)
 
 // Creo valori random da mostrare in seguito e li salvo in una variabile.
 
-const carrozza = Math.floor(Math.random() * 9)
+const Wagon = Math.floor(Math.random() * 9)
 
 const code = Math.floor(Math.random() * 10000)
 
@@ -119,7 +119,7 @@ console.log(nes)
 document.getElementById("offer").innerHTML = `${age}`
 console.log(age)
 
-document.getElementById("carrozza").innerHTML = `${carrozza}`
+document.getElementById("carrozza").innerHTML = `${Wagon}`
 console.log(carrozza)
 
 document.getElementById("codiceCp").innerHTML = `${code}`
